@@ -668,11 +668,40 @@ list-style: none;
 
 .portf-thumb{
     position: relative;
+    overflow: hidden;
 
 }
-.portf-thumb a {
- position: relative;
-}
+
 .overlay{
  position: absolute;
+ top: 0;
+ left: 0;
+
+    
+ background-color: rgba(33, 150, 243, 0.9);
+ width: 100%;
+ height: 100%;
+ 
+
+ transform: translateY(100%);
+ transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portf-link:hover .overlay{
+    transform: translateY(0);
+}
+.portf-text{
+font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+   
+
+    letter-spacing: 0.03em;
+
+    padding-top: 63px ;
+    padding-bottom: 63px;
+    padding-right: 24px;
+    padding-left: 24px;
+
+    color: #FFFFFF;
 }
