@@ -65,11 +65,22 @@
         <div class="container">
           <ul class="list-project">
             <li class="project-item">
+                <div class="portf-thumb">
               <a href="">
           <img src="./images/monitor.jpg" alt="" width="300" />
             </a>
+
+                <div class="overlay">
+                  <p>
+                    Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
+                </div>
+                     </div>
+                     <div>
           <h3 class="project">Технокряк</h3>
           <p class="project-text">Веб-сайт</p>
+          </div>
             </li>
             <li class="project-item">
               <a href="">
@@ -177,5 +188,22 @@
           </div>
         </div>
     </footer>
+      <script src="./js/modal.js">
+        (() => {
+          const refs = {
+            openModalBtn: document.querySelector("[data-modal-open]"),
+            closeModalBtn: document.querySelector("[data-modal-close]"),
+            modal: document.querySelector("[data-modal]"),
+          };
+
+          refs.openModalBtn.addEventListener("click", toggleModal);
+          refs.closeModalBtn.addEventListener("click", toggleModal);
+
+          function toggleModal() {
+            refs.modal.classList.toggle("is-hidden");
+          }
+        })();
+
+      </script>
   </body>
 </html>
